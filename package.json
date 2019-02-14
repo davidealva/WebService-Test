@@ -1,0 +1,17 @@
+{
+  "name": "Vacasa",
+  "version": "1.0.0",
+  "description": "vacasa code test",
+  "main": "index.js",
+  "author": "David Alvarado",
+  "license": "MIT",
+  "scripts": {
+    "start": "nodemon server.js"
+  },
+  "dependencies": {
+    "axios": "^0.18.0",
+    "cors": "^2.8.5",
+    "express": "^4.16.4",
+    "webhoseio": "^1.0.2"
+  }
+}
