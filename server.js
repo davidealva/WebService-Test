@@ -8,7 +8,8 @@ const port = process.env.PORT || 3000;
 
 app.use(cors())
 
-const url = "https://webhose.io/filterWebContent?token=c9eb93cd-82b2-4f9d-98fe-9ec82a69013d&size=25&sort=relevancy&latest=true&format=json&q="
+const token = process.env.TOKEN;
+const url = `https://webhose.io/filterWebContent?token=${token}&size=25&sort=relevancy&latest=true&format=json&q=`
 
 // Serve static files from the React frontend app
 app.use(express.static(path.join(__dirname, 'client/build')))
