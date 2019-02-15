@@ -1,13 +1,17 @@
 const express = require('express');
 const axios = require('axios');
-const cors = require('cors')
+const cors = require('cors');
+const path = require('path');
 
 const app = express();
-const port = process.env.PORT || 3001;
+const port = process.env.PORT || 3000;
 
 app.use(cors())
 
 const url = "https://webhose.io/filterWebContent?token=c9eb93cd-82b2-4f9d-98fe-9ec82a69013d&size=25&sort=relevancy&latest=true&format=json&q="
+
+// Serve static files from the React frontend app
+app.use(express.static(path.join(__dirname, 'client/build')))
 
 // API call with Axios
 const callApi = (url, data) => {
@@ -22,7 +26,7 @@ const callApi = (url, data) => {
         });
 }
 
-
+// API route
 app.get('/api', (req,res) => {
   const data = req.query.q
   console.log('in server: ',data)

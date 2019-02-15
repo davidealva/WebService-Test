@@ -17,7 +17,7 @@ class App extends Component {
   handleSubmit(e) {
     e.preventDefault();
     this.setState({ loading: true });
-    axios.get(`http://165.227.2.138:3001/api/?q=${this.state.search}`)
+    axios.get(`/api/?q=${this.state.search}`)
       .then(response => this.setState({
         data: response.data.data.posts,
         loading: false
