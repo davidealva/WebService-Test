@@ -39,7 +39,7 @@ class App extends Component {
             <div className="columns is-mobile">
               <div className="column is-three-fifths is-offset-one-fifth">
                 <form onSubmit={this.handleSubmit}>
-                  <h1 className="title is-5 has-text-grey-dark">Start typing and let's see what we find</h1>
+                  <h1 className="title is-5 has-text-grey-dark">Start typing and lets see what we find</h1>
                   <input className="input is-medium is-info" type="text" name="q" value={this.state.search} onChange={this.handleChange.bind(this)}/>
                   { this.state.loading === true ? (
                     <button className="button is-medium is-info is-loading" type="submit" value="Submit">Search</button>
